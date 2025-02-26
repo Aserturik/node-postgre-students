@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:17
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: aserturik
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: nodepg
+    ports:
+      - "5432:5432"
