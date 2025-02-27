@@ -9,4 +9,3 @@ INSERT INTO students(name, career)
         ('Alex Hernandez', 'Ingenieria de sistemas'), 
         ('Pedro pedro pedro', 'Licenciatura en Lenguas');
 
-SELECT * FROM students;
