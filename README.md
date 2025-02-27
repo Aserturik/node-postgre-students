@@ -1,10 +1,11 @@
 # Nodejs PostgreSQL REST API
 
-A REST API using Node.js and PostgreSQL with pg library and using Express.js for routing.
+API realizada con Node.js y PostgreSQL con la libreria de pg y usando Express.js para las rutas.
 
-## Installation
+## Instalación
 
-1. Clone the repository: `https://github.com/Aserturik/node-postgre-students`
+1. Clona el repositorio: `https://github.com/Aserturik/node-postgre-students`
+
 
 Default env:
 
