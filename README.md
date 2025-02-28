@@ -2,27 +2,12 @@
 
 API desarrollada con **Node.js** y **PostgreSQL**, utilizando la librería `pg` para la conexión con la base de datos y `Express.js` para la gestión de rutas.
 
-## Instalación y Configuración
-
-### 1️⃣ Clonar el repositorio
+## Instalación 
 
 ```sh
 git clone https://github.com/Aserturik/node-postgre-students
 cd node-postgre-students/
 ```
-
-### 2️⃣ Configurar variables de entorno
-
-Ejecuta el siguiente comando para crear el archivo `.env`:
-
-```sh
-echo "DB_USER=aserturik
-DB_PASSWORD=mypassword
-DB_HOST=db
-DB_PORT=5432
-DB_DATABASE=nodepg" > .env
-```
-
 ##  Ejecución
 
 ### Ejecutar con Docker 
@@ -56,7 +41,7 @@ docker exec -it postgres_container psql -U aserturik -d nodepg -c "SELECT * FROM
     ```json
     {
       "name": "Juan Pérez",
-      "career": "Ingeniería Informática"
+      "career": "Ingeniería Petroquímica"
     }
     ```
     
