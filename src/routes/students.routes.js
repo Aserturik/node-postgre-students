@@ -18,8 +18,8 @@ router.get("/students/:id", getStudent);
 
 router.post("/students/", createStudent);
 
-router.delete("/student/:id", deleteStudent);
+router.delete("/students/:id", deleteStudent);
 
-router.put("/student/:id", updateStudent);
+router.put("/students/:id", updateStudent);
 
 export default router;

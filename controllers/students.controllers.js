@@ -10,12 +10,18 @@ export const getStudents = async (req, res) => {
 };
 
 export const getStudent = async (req, res) => {
-  const { id } = req.params;
-  const { rows } = await pool.query(`SELECT * FROM students WHERE id = ${id}`);
-  if (rows.length !== 0) {
-    res.json(rows[0]);
-  } else {
-    res.status(404).json({ message: "estudiante no encontrado" });
+  try {
+    const { id } = req.params;
+    const { rows } = await pool.query(
+      `SELECT * FROM students WHERE id = ${id}`,
+    );
+    if (rows.length !== 0) {
+      res.json(rows[0]);
+    } else {
+      res.status(404).json({ message: "estudiante no encontrado" });
+    }
+  } catch (error) {
+    res.status(404).json({message: "estudiante invalido"})
   }
 };
 
@@ -53,8 +59,8 @@ export const updateStudent = async (req, res) => {
   const { id } = req.params;
   const data = req.body;
   const result = await pool.query(
-    "UPDATE users SET name = $1, email = $2 WHERE id=$3 RETURNING *",
-    [data.name, data.email, id],
+    "UPDATE students SET name = $1, career = $2 WHERE id=$3 RETURNING *",
+    [data.name, data.career, id],
   );
   if (result.rowCount === 0) {
     res.status(404).json({ message: `No existe el estudiante con id = ${id}` });
