@@ -1,5 +1,7 @@
 # Node.js + PostgreSQL REST API
 
+Autor: Alex Hernández 
+
 API desarrollada con **Node.js** y **PostgreSQL**, utilizando la librería `pg` para la conexión con la base de datos y `Express.js` para la gestión de rutas.
 
 ## Instalación 
